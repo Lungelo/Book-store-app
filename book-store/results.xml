@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bookstore>
+    <book>
+        <title>J2EE programming</title>
+        <category>web</category>
+        <price>109.0</price>
+        <year>109.0</year>
+        <authors>
+            <author>
+                <name>Lungelo H Qwabe</name>
+            </author>
+            <author>
+                <name>Zandi T Khumalo</name>
+            </author>
+        </authors>
+    </book>
+</bookstore>

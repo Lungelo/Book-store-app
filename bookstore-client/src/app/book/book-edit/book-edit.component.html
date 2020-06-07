@@ -1,0 +1,42 @@
+<ol class="breadcrumb float-right">
+  <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+  <li class="breadcrumb-item active">Book</li>
+</ol>
+<div class="card">
+  <div class="header">
+    <h2 class="title">Book Detail</h2>
+  </div>
+  <div class="content">
+    <div *ngIf="feedback" class="alert alert-{{feedback.type}}">{{ feedback.message }}</div>
+    <form *ngIf="book" #editForm="ngForm" (ngSubmit)="save()">
+    
+      <div class="form-group">
+        <label>Id</label>
+        {{book.id || 'n/a'}} 
+      </div>
+    
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input [(ngModel)]="book.title" id="title" name="title" class="form-control">
+      </div>
+    
+      <div class="form-group">
+        <label for="year">Year</label>
+        <input type="number" [(ngModel)]="book.year" id="year" name="year" class="form-control">
+      </div>
+    
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input [(ngModel)]="book.category" id="category" name="category" class="form-control">
+      </div>
+    
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" [(ngModel)]="book.price" id="price" name="price" class="form-control">
+      </div>
+    
+      <button type="submit" class="btn btn-primary" [disabled]="!editForm.form.valid">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    </form>
+  </div>
+</div>

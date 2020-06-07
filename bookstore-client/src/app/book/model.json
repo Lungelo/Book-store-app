@@ -1,0 +1,41 @@
+{ 
+    "title": "Book",
+    "entity": "book",
+    "api": {
+      "url": "http://localhost:8080/api/v1/books"
+    },
+    "filter": [
+      "title",
+	  "category"
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "label": "Id",
+        "isId": true,
+        "readonly": true,
+        "type": "number"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "label": "Title"
+      },
+	  {
+        "name": "year",
+        "type": "number",
+        "label": "Year"
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "label": "Category"
+      },
+	  {
+        "name": "price",
+        "type": "number",
+        "label": "Price"
+      }
+      
+    ]
+}
